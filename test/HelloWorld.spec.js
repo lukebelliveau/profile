@@ -12,6 +12,6 @@ describe('blah', () => {
   it('should render a greeting', () => {
     const helloWorld = shallow(<HelloWorld />);
 
-    expect(helloWorld).to.contain('Hello lukeWorld!');
+    expect(helloWorld).to.contain('Hello World!');
   });
 });
