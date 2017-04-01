@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-  entry: './server.js',
+  entry: './src/renderDOM.js',
   output: {
     path: path.resolve('dist'),
     filename: 'app.bundle.js',
