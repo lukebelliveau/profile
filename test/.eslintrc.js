@@ -3,6 +3,7 @@ module.exports = {
     "mocha": "true"
   },
   "rules": {
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "no-unused-expressions": "off"
   }
 };

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
@@ -13,14 +14,14 @@ describe('(Component) NameInput', () => {
   chai.use(sinonChai);
 
   it('should render an input field with placeholder hint', () => {
-    const nameInput = shallow(<NameInputComponent />);
+    const nameInput = shallow(<NameInputComponent onChange={ () => {} } />);
 
     expect(nameInput.find('input')).to.have.prop('placeholder', 'your name');
   });
 
   it('should call onChange function when input is changed', () => {
     const onChangeFunc = sinon.spy();
-    const nameInput = shallow(<NameInputComponent onChange={ onChangeFunc }/>);
+    const nameInput = shallow(<NameInputComponent onChange={ onChangeFunc } />);
 
     nameInput.find('input').simulate('change');
 

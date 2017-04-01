@@ -1,4 +1,4 @@
-import 'jsdom-global/register'
+import 'jsdom-global/register';
 import React from 'react';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
@@ -6,7 +6,6 @@ import chaiEnzyme from 'chai-enzyme';
 import { shallow, mount } from 'enzyme';
 
 import Hello from '../src/Hello';
-import NameInputComponent from '../src/NameInputComponent';
 
 
 describe('Hello', () => {
@@ -15,14 +14,14 @@ describe('Hello', () => {
   it('should say "Hello!" when there is no name', () => {
     const helloWorld = shallow(<Hello />);
 
-    expect(helloWorld.find({ 'name': 'greeting' }).text()).to.equal('Hello!');
+    expect(helloWorld.find({ name: 'greeting' }).text()).to.equal('Hello!');
   });
 
   it('should render a greeting', () => {
-    const helloWorld = shallow(<Hello name="luke"/>);
+    const helloWorld = shallow(<Hello name="luke" />);
 
 
-    expect(helloWorld.find({ 'name': 'greeting' })).to.have.text('Hello luke!');
+    expect(helloWorld.find({ name: 'greeting' })).to.have.text('Hello luke!');
   });
 
   describe('Entering a name', () => {
@@ -31,11 +30,9 @@ describe('Hello', () => {
       const helloWorld = mount(<Hello />);
       const nameInput = helloWorld.find('input');
 
+      nameInput.simulate('change', { target: { value: userName } });
 
-      nameInput.simulate('change', {target: {value: userName}});
-
-      expect(helloWorld.find({ 'name': 'greeting' })).text().to.equal('Hello luke!');
-    })
-
-  })
+      expect(helloWorld.find({ name: 'greeting' })).text().to.equal('Hello luke!');
+    });
+  });
 });

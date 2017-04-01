@@ -31,7 +31,7 @@ class Hello extends Component {
 };
 
 Hello.defaultProps = {
-  name: ''
+  name: '',
 };
 
 Hello.propTypes = {
