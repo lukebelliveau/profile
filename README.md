@@ -1,6 +1,6 @@
 # Barebones React Webapp
 
-Barebones react app built from scratch. 
+Barebones react app built from scratch. I'm hoping my commit history will be useful for those looking to learn about bootstrapping a React webapp.
 
 Includes webpack/babel, chai/mocha/enzyme tests, eslint (airbnb), webpack-dev-server, and a few other things already configured.
 
