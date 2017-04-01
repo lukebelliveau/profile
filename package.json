@@ -4,7 +4,9 @@
   "description": "personal site for Luke Belliveau",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha-webpack --webpack-config webpack.config-test.js \"test/**/*.spec.js\"",
+    "twatch": "mocha-webpack --webpack-config webpack.config-test.js --watch \"test/**/*.spec.js\"",
+    "server": "webpack-dev-server --hot --progress --colors --host 0.0.0.0 --port 3000"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,11 @@
     "babel-loader": "^6.4.1",
     "babel-preset-latest": "^6.24.0",
     "babel-preset-react": "^6.23.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.8.0",
     "express": "^4.15.2",
+    "mocha": "^3.2.0",
+    "mocha-webpack": "^0.7.0",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2"
   }
