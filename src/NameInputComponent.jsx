@@ -1,7 +1,11 @@
 import React, { PropTypes } from 'react';
 
+const style = {
+  width: '95%',
+};
+
 const NameInputComponent = ({ onChange }) => (
-  <input placeholder="your name" onChange={ onChange } />
+  <input style={ style } placeholder="your name" onChange={ onChange } />
 );
 
 NameInputComponent.propTypes = {

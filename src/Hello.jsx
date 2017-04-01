@@ -2,6 +2,13 @@ import React, { Component, PropTypes } from 'react';
 
 import NameInputComponent from './NameInputComponent';
 
+const style = (name) => {
+  const width = name.length === 0 ? '25%' : '50%';
+  return {
+    width,
+  };
+};
+
 class Hello extends Component {
   constructor(props) {
     super(props);
@@ -22,9 +29,15 @@ class Hello extends Component {
 
   render() {
     return (
-      <div>
-        <div name="greeting" className="b">Hello{ this.state.name }!</div>
-        <NameInputComponent onChange={ this.changeName } />
+      <div className="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
+        <div
+          name="greeting"
+          style={ style(this.state.name) }
+          className="f3 f2-m f1-l fw2 black-90 mv3 center style b"
+        >
+          Hello{ this.state.name }!
+        </div>
+        <NameInputComponent className="center" onChange={ this.changeName } />
       </div>
     );
   };
