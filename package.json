@@ -4,9 +4,11 @@
   "description": "personal site for Luke Belliveau",
   "main": "server.js",
   "scripts": {
-    "test": "mocha-webpack --webpack-config webpack.config-test.js \"test/**/*.spec.js\"",
+    "test": "mocha-webpack --webpack-config webpack.config-test.js \"test/**/*.spec.js\" && eslint src/* test/*",
     "twatch": "mocha-webpack --webpack-config webpack.config-test.js --watch \"test/**/*.spec.js\"",
-    "server": "webpack-dev-server --hot --progress --colors --host 0.0.0.0 --port 3000"
+    "server": "webpack-dev-server --hot --progress --colors --host 0.0.0.0 --port 3000",
+    "lint": "eslint src/* test/*",
+    "lint:fix": "eslint -- --fix src/* test/*"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,12 @@
     "babel-preset-react": "^6.23.0",
     "chai": "^3.5.0",
     "enzyme": "^2.8.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "eslint-plugin-react": "^6.10.3",
     "express": "^4.15.2",
     "mocha": "^3.2.0",
     "mocha-webpack": "^0.7.0",
