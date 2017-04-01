@@ -1,0 +1,22 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "personal site for Luke Belliveau",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukebelliveau/profile.git"
+  },
+  "author": "Luke Belliveau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukebelliveau/profile/issues"
+  },
+  "homepage": "https://github.com/lukebelliveau/profile#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
