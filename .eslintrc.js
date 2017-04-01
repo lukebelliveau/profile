@@ -4,7 +4,6 @@ module.exports = {
         "es6": true
     },
     "extends": [
-      "eslint:recommended",
       "airbnb"
     ],
     "parserOptions": {
@@ -30,6 +29,9 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "react/jsx-curly-spacing": "off",
+        "no-extra-semi": "off"
+
     }
 };
