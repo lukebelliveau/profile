@@ -50,3 +50,4 @@ fabric.properties
 #mine
 node_modules/
 .tmp/
+dist/

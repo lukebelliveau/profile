@@ -23,7 +23,7 @@ class Hello extends Component {
   render() {
     return (
       <div>
-        <div name="greeting">Hello{ this.state.name }!</div>
+        <div name="greeting" className="b">Hello{ this.state.name }!</div>
         <NameInputComponent onChange={ this.changeName } />
       </div>
     );
