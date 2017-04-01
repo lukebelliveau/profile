@@ -4,13 +4,13 @@ import chaiEnzyme from 'chai-enzyme';
 
 import { shallow } from 'enzyme';
 
-import HelloWorld from '../src/HelloWorld';
+import Hello from '../src/Hello';
 
 describe('blah', () => {
   chai.use(chaiEnzyme());
 
   it('should render a greeting', () => {
-    const helloWorld = shallow(<HelloWorld />);
+    const helloWorld = shallow(<Hello />);
 
     expect(helloWorld).to.contain('Hello lukeWorld!');
   });

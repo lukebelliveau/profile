@@ -1,7 +1,7 @@
 import React from 'react';
 
-const HelloWorld = () => (
+const Hello = () => (
   <div>Hello lukeWorld!</div>
 );
 
-export default HelloWorld;
+export default Hello;
