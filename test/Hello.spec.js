@@ -6,6 +6,7 @@ import chaiEnzyme from 'chai-enzyme';
 import { shallow, mount } from 'enzyme';
 
 import Hello from '../src/Hello';
+import NameInput from '../src/NameInputComponent';
 
 
 describe('Hello', () => {
@@ -27,8 +28,8 @@ describe('Hello', () => {
   describe('Entering a name', () => {
     it('should greet user with name entered', () => {
       const userName = 'luke';
-      const helloWorld = mount(<Hello />);
-      const nameInput = helloWorld.find('input');
+      const helloWorld = shallow(<Hello />);
+      const nameInput = helloWorld.find(NameInput);
 
       nameInput.simulate('change', { target: { value: userName } });
 
