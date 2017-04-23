@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 100px 1fr 10%;
+}
+
+.container p {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: center;
+}
